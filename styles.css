@@ -1,0 +1,793 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #111111;
+    color: #f4f0e8;
+    font-family: "Inter", sans-serif;
+    padding: 25px;
+}
+
+
+.bento-container {
+    max-width: 1400px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr
+        1fr
+        1fr
+        1.1fr;
+
+    grid-template-rows:
+        330px
+        300px
+        300px;
+
+    gap: 16px;
+}
+
+
+/* COMMON CARD */
+
+.card {
+    border-radius: 22px;
+    padding: 28px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+/* HERO */
+
+.hero {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e6392f 0%,
+            #d92f28 45%,
+            #111111 45%,
+            #111111 100%
+        );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+.tag {
+    background: #f4f0e8;
+    color: #111111;
+    padding: 8px 13px;
+    border-radius: 20px;
+}
+
+
+.hero-content {
+    max-width: 600px;
+}
+
+
+.small-text {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+
+.hero h1 {
+    font-family: "Anton", sans-serif;
+    font-size: clamp(60px, 7vw, 110px);
+    line-height: 0.82;
+    letter-spacing: -2px;
+}
+
+
+.hero h1 span {
+    color: #f5c542;
+}
+
+
+.hero-description {
+    max-width: 400px;
+    margin-top: 25px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+.hero-bottom {
+    display: flex;
+    gap: 25px;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* ARTISTS */
+
+.artists {
+    background: #f4f0e8;
+    color: #111111;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.card-heading > span {
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+.card-heading h2 {
+    font-family: "Anton", sans-serif;
+    font-size: 34px;
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+
+.artist-list {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.artist {
+    display: grid;
+    grid-template-columns: 30px 1fr auto;
+
+    align-items: center;
+
+    padding: 10px 0;
+
+    border-top: 1px solid #cccccc;
+}
+
+
+.artist .number {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+.artist strong {
+    font-size: 13px;
+}
+
+
+.artist small {
+    font-size: 10px;
+    color: #777;
+}
+
+
+/* STATISTIC */
+
+.statistic {
+    background: #f5c542;
+    color: #111111;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.stat-number {
+    font-family: "Anton", sans-serif;
+    font-size: 95px;
+    line-height: 0.8;
+}
+
+
+.statistic h3 {
+    font-family: "Anton", sans-serif;
+    font-size: 30px;
+    line-height: 0.9;
+}
+
+
+.statistic p {
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 260px;
+}
+
+
+/* REGIONS */
+
+.regions {
+    grid-column: span 2;
+
+    background: #202020;
+}
+
+
+.regions .card-heading h2 {
+    color: #f4f0e8;
+}
+
+
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-top: 40px;
+}
+
+
+.region {
+    min-height: 125px;
+
+    border: 1px solid #444;
+    border-radius: 15px;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: 0.3s;
+}
+
+
+.region:hover {
+    background: #e6392f;
+    border-color: #e6392f;
+    transform: translateY(-5px);
+}
+
+
+.region span {
+    font-size: 10px;
+    font-weight: 800;
+    color: #f5c542;
+}
+
+
+.region strong {
+    font-size: 13px;
+}
+
+
+.region small {
+    color: #999;
+    font-size: 10px;
+}
+
+
+/* CYPHER */
+
+.cypher {
+    background: #e6392f;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.cypher h2 {
+    font-family: "Anton", sans-serif;
+    font-size: 34px;
+    line-height: 0.9;
+
+    margin-top: 12px;
+}
+
+
+.cypher-circle {
+    width: 70px;
+    height: 70px;
+
+    border: 2px solid #f4f0e8;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Anton", sans-serif;
+
+    transform: rotate(-15deg);
+}
+
+
+.mic-line {
+    height: 2px;
+    width: 100%;
+
+    background: #f4f0e8;
+
+    opacity: 0.5;
+}
+
+
+.cypher p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* QUOTE */
+
+.quote {
+    background: #f4f0e8;
+    color: #111111;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.quote-mark {
+    font-family: Georgia, serif;
+    font-size: 80px;
+    line-height: 0.5;
+    color: #e6392f;
+}
+
+
+.quote p {
+    font-family: "Anton", sans-serif;
+    font-size: 34px;
+    line-height: 0.95;
+}
+
+
+.quote p strong {
+    color: #e6392f;
+}
+
+
+.quote-author {
+    margin-top: 25px;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* TIMELINE */
+
+.timeline {
+    background: #f5c542;
+    color: #111111;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.timeline-items {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+
+    padding: 12px 0;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
+.timeline-item span {
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+.timeline-item p {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+
+/* PLAYLIST */
+
+.playlist {
+    background: #292929;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.playlist-top {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+.album-art {
+    height: 120px;
+
+    background: #e6392f;
+
+    border-radius: 15px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.album-art span {
+    position: relative;
+    z-index: 2;
+
+    font-family: "Anton", sans-serif;
+    font-size: 30px;
+
+    transform: rotate(-5deg);
+}
+
+
+.vinyl {
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            #111 0px,
+            #111 3px,
+            #222 4px,
+            #111 6px
+        );
+
+    right: -50px;
+    top: -25px;
+}
+
+
+.song-info h2 {
+    font-family: "Anton", sans-serif;
+    font-size: 24px;
+}
+
+
+.song-info p {
+    font-size: 10px;
+    color: #aaa;
+}
+
+
+.progress {
+    height: 3px;
+    background: #555;
+}
+
+
+.progress div {
+    height: 100%;
+    width: 62%;
+    background: #f5c542;
+}
+
+
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    font-size: 14px;
+}
+
+
+.player .play {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f5c542;
+    color: #111;
+}
+
+
+/* FOOTER */
+
+.footer-card {
+    grid-column: span 2;
+
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            #f5c542 0,
+            #f5c542 90px,
+            transparent 91px
+        ),
+        #f4f0e8;
+
+    color: #111111;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.footer-card h2 {
+    font-family: "Anton", sans-serif;
+
+    font-size: 48px;
+    line-height: 0.85;
+
+    margin-top: 15px;
+}
+
+
+.footer-card p {
+    max-width: 300px;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+.arrow {
+    position: absolute;
+
+    right: 50px;
+    top: 50px;
+
+    font-size: 50px;
+    font-weight: 300;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .bento-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-rows: auto;
+
+        gap: 12px;
+    }
+
+    .hero {
+        grid-column: span 2;
+        grid-row: span 1;
+
+        min-height: 450px;
+    }
+
+    .regions {
+        grid-column: span 2;
+    }
+
+    .footer-card {
+        grid-column: span 2;
+    }
+
+    .region-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 10px;
+    }
+
+
+    .bento-container {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+
+    .card {
+        grid-column: span 1 !important;
+
+        min-height: 300px;
+
+        padding: 22px;
+
+        border-radius: 18px;
+    }
+
+
+    .hero {
+        min-height: 500px;
+    }
+
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+
+    .hero-bottom {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+    .artists {
+        min-height: 350px;
+    }
+
+
+    .statistic {
+        min-height: 330px;
+    }
+
+
+    .stat-number {
+        font-size: 80px;
+    }
+
+
+    .regions {
+        min-height: 430px;
+    }
+
+
+    .region-grid {
+        grid-template-columns: 1fr 1fr;
+
+        margin-top: 30px;
+    }
+
+
+    .region {
+        min-height: 130px;
+    }
+
+
+    .cypher {
+        min-height: 350px;
+    }
+
+
+    .quote {
+        min-height: 300px;
+    }
+
+
+    .quote p {
+        font-size: 32px;
+    }
+
+
+    .timeline {
+        min-height: 380px;
+    }
+
+
+    .playlist {
+        min-height: 400px;
+    }
+
+
+    .footer-card {
+        min-height: 350px;
+    }
+
+
+    .footer-card h2 {
+        font-size: 55px;
+    }
+
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+
+    .hero {
+        min-height: 460px;
+    }
+
+
+    .region-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-card h2 {
+        font-size: 45px;
+    }
+
+
+    .stat-number {
+        font-size: 65px;
+    }
+
+}
